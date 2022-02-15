@@ -9,12 +9,13 @@ titulo.textContent = "Nuticionista Aparecida";
 
 var paciente = document.querySelector("#primeiro-paciente");
 
-var alturaPaciente = paciente.querySelector(".info-altura");
-var altura = alturaPaciente.textContent;
+var tdAltua = paciente.querySelector(".info-altura");
+var altura = tdAltua.textContent;
 
-var pesoPaciente = paciente.querySelector(".info-peso");
-var peso = pesoPaciente.textContent
+var tdPeso = paciente.querySelector(".info-peso");
+var peso = tdPeso.textContent
 
 var imcPaciente = peso/(altura*altura);
 
+paciente.querySelector(".info-imc").textContent = imcPaciente
 alert(imcPaciente);
