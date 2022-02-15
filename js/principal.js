@@ -12,7 +12,7 @@ var paciente = document.querySelector("#primeiro-paciente");
 var alturaPaciente = paciente.querySelector(".info-altura");
 var altura = alturaPaciente.textContent;
 
-var pesoPaciente = paciente.querySelector(".info-peso").textContent;
+var pesoPaciente = paciente.querySelector(".info-peso");
 var peso = pesoPaciente.textContent
 
 var imcPaciente = peso/(altura*altura);
