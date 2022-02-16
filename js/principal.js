@@ -14,14 +14,15 @@ var pacientes = document.querySelectorAll(".paciente");
 
 for(i=0 ; i<pacientes.length ; i++){
 
+  paciente = pacientes[i] ;
   //Armazena os elementos da página
-  var tdAltua = pacientes[i].querySelector(".info-altura");
+  var tdAltua = paciente.querySelector(".info-altura");
   var altura = tdAltua.textContent;
   
-  var tdPeso = pacientes[i].querySelector(".info-peso");
+  var tdPeso = paciente.querySelector(".info-peso");
   var peso = tdPeso.textContent
   
-  var tdImc = pacientes[i].querySelector(".info-imc");
+  var tdImc = paciente.querySelector(".info-imc");
   
   var alturaEhValida = true;
   var pesoEhValido = true;
@@ -30,11 +31,13 @@ for(i=0 ; i<pacientes.length ; i++){
   if(peso <= 0 || peso >= 1000) {
     pesoEhValido = false;
     tdImc.textContent = "Peso é inválido!"
+    paciente.classList.add("paciente-invalido")
   }
   
   if(altura <= 0 || altura >= 3.00) {
     alturaEhValida = false;
     tdImc.textContent = "Altura é inválida!"
+    paciente.classList.add("paciente-invalido")
   }
   
   if(alturaEhValida && pesoEhValido) {
