@@ -46,3 +46,22 @@ for(i=0 ; i<pacientes.length ; i++){
     tdImc.textContent = imcPaciente.toFixed(2);
   }  
 }
+
+//---- Escutar eventos ----
+
+titulo.addEventListener("click", function() {
+  console.log("Olha só, posso usar funçoes anônimas!");
+})
+
+function mostraMensagem(){
+  console.log("Olá, eu fui clicado!");
+}
+
+
+//Clique no botão
+
+var botao = document.querySelector("#adicionar-paciente");
+
+botao.addEventListener("click", function () {
+  console.log("Clicou em adicionar! :)");
+})
